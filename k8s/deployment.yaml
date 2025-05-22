@@ -15,5 +15,6 @@ spec:
       containers:
       - name: swe304-4
         image: aysenurdocker/swe304-4:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080 
