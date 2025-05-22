@@ -30,12 +30,13 @@ pipeline {
             }
         }
 
-        stage('K8s Deploy') {
-            steps {
-                bat 'kubectl apply -f k8s\\deployment.yaml'
-                bat 'kubectl apply -f k8s\\service.yaml'
-            }
-        }
+ stage('K8s Deploy') {
+     steps {
+         bat 'kubectl --kubeconfig=C:\\ProgramData\\Jenkins\\.kube\\config apply -f k8s\\deployment.yaml'
+         bat 'kubectl --kubeconfig=C:\\ProgramData\\Jenkins\\.kube\\config apply -f k8s\\service.yaml'
+     }
+ }
+
     }
 
     triggers {
