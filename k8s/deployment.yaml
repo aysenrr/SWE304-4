@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: swe304-4
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: swe304-4
