@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe304-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swe304-4
+  template:
+    metadata:
+      labels:
+        app: swe304-4
+    spec:
+      containers:
+      - name: swe304-4
+        image: aysenurdocker/swe304-4:latest
+        ports:
+        - containerPort: 8080 
